@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broken Decimal Calculator</title>
+    <style>
+
+  
+     body { 
+            display: flex;
+            flex-direction: column; /* Stack heading and calculator vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: yellow;
+        }
+        h1 { 
+            color: blue;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Space between heading and calculator */
+        }
+        .calculator {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            width: 300px;
+        }
+        .display {
+            width: 260px;
+            height: 40px;
+            font-size: 2em;
+            text-align: right;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .button {
+            padding: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            border: 1px solid #ddd;
+        }
+        .button:hover {
+            background-color: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+
+<h1>PLEASE CALCULATE YOUR TOTAL</h1>
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled />
+        <div class="buttons">
+            <button class="button" onclick="inputNumber(0.1)">0.9</button>
+            <button class="button" onclick="inputNumber(0.2)">0.8</button>
+            <button class="button" onclick="inputNumber(0.3)">0.7</button>
+            <button class="button" onclick="inputDecimal(.)">.</button>
+
+            <button class="button" onclick="inputNumber(0.4)">0.6</button>
+            <button class="button" onclick="inputNumber(0.6)">0.5</button>
+            <button class="button" onclick="inputNumber(0.5)">0.4</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+
+            <button class="button" onclick="inputNumber(0.1)">0.3</button>
+            <button class="button" onclick="inputNumber(0.2)">0.2</button>
+            <button class="button" onclick="inputNumber(0.0)">0.1</button>
+            <button class="button" onclick="calculate()">=</button>
+
+            <button class="button" onclick="inputNumber(0)">0</button>
+            <button class="button" onclick="inputDecimal()">.</button> <!-- Intentionally broken: two decimal points -->
+            <button class="button" onclick="calculate()">=</button>
+            <button class="button" onclick="inputDecimal()">+</button> <!-- Invalid: trying to add a decimal point as operator -->
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+        let currentInput = "";
+        
+        function inputNumber(number) {
+            currentInput += number;
+            display.value = currentInput;
+        }
+
+        function inputDecimal() {
+            // Broken: No validation to check if decimal is already present
+            currentInput += ".";
+            display.value = currentInput;
+        }
+
+        function clearDisplay() {
+            currentInput = "";
+            display.value = "";
+        }
+
+        function calculate() {
+            try {
+                // Broken: Inability to handle invalid calculations properly
+                display.value = eval(currentInput);
+                currentInput = display.value; // Update currentInput with the result
+            } catch (error) {
+                display.value = "Error"; // Show error message on invalid input
+                currentInput = "";
+            }
+        }
+    </script>
+
+    <button onclick="window.location.href='C:/Users/munu1/OneDrive/Desktop/Computer%20Vision/pay.html'" style="float: CENTER; font-size: 20px; padding: 50px 100px; border-radius: 10px; background-color: #40E0D0; color: white;">Pay Here.</button>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrumptious food items</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Shop Container */
+        .shop-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            justify-items: center;
+        }
+
+        /* Product Items */
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 220px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Price */
+        .price {
+            font-size: 18px;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #cc5200;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🛒 Bizarre Bazaar</h1>
+    </header>
+
+    <!-- Products Section -->
+    <section class="shop-container">
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\green pizza.jpeg"" alt="An absolutely amazing slice of pizza with some mint choco cream!">
+            <h3>Pizza topped with mint choco ice cream!</h3>
+            <p class="price">$√3</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\chocolate covered pickles.webp"" alt="chocolate covered pickles!">
+            <h3>Choco pickles!</h3>
+            <p class="price">$√7</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\coffee wings.webp" alt="coffee wings">
+            <h3>Coffee flavoured chicken wings!</h3>
+            <p class="price">$√23</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\hot sauce ice cream.webp" alt="seriously spicy ice cream">
+            <h3>hot sauce ice cream!</h3>
+            <p class="price">$√123456789069696969</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+</body>
+</html>

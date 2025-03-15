@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funky fashion clothing</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Shop Container */
+        .shop-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            justify-items: center;
+        }
+
+        /* Product Items */
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 220px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Price */
+        .price {
+            font-size: 18px;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #cc5200;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🛒 Bizarre Bazaar</h1>
+    </header>
+
+    <!-- Products Section -->
+    <section class="shop-container">
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\toilet paper.jpeg"" alt="toilet paper jacket!">
+            <h3>Toilet paper jacket!</h3>
+            <p class="price">$∜111111111</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\moldy cheese.jpeg"" alt="moldy cheese suit">
+            <h3>moldy cheese suit!</h3>
+            <p class="price">$∜2222222....</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\tyres dress.jpeg" alt="The dress of tyres">
+            <h3>The dress of tyres!</h3>
+            <p class="price">$∜333333...</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="item">
+            <img src="C:\Users\munu1\OneDrive\Desktop\Computer Vision\dolphin.jpeg" alt="The classic dolphin outfit">
+            <h3>The classic dolphin outfit!</h3>
+            <p class="price">$∜444444....</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+</body>
+</html>

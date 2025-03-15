@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8d7da;
+            color: #721c24;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .error-icon {
+            font-size: 50px;
+            color: #dc3545;
+        }
+        .retry-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .retry-button:hover {
+            background-color: #c82333;
+        }
+
+        .oops-message {
+            position: absolute;
+            font-size: 24px;
+            color: #721c24;
+            font-weight: bold;
+            animation: popups 1s linear infinite;
+        }
+
+        .left-side {
+            left: 0;
+        }
+
+        .right-side {
+            right: 0;
+        }
+
+        @keyframes popups {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="error-icon">❌</div>
+        <h1>Oops! Payment Failed</h1>
+        <p>There was an issue processing your payment. Please try again.</p>
+        <button class="retry-button" onclick="retryPayment()">Retry Payment</button>
+    </div>
+
+    <script>
+        function createOopsMessage(position) {
+            let message = document.createElement('div');
+            message.classList.add('oops-message', position);
+            message.innerText = "Oops! Payment Failed";
+            document.body.appendChild(message);
+        }
+
+        function displayMessageMultipleTimes(times) {
+            let count = 0;
+            const interval = setInterval(function() {
+                if (count < times) {
+                    createOopsMessage('left-side');
+                    createOopsMessage('right-side');
+                    count++;
+                } else {
+                    clearInterval(interval); // Stop after 3 times
+                }
+            }, 1000); // Shows the message every 1 second
+        }
+
+        function retryPayment() {
+            alert("Redirecting to retry payment...");
+            window.location.href = "https://yourpaymentgateway.com/retry"; // Replace with your actual retry URL
+        }
+
+        // Show "Oops!" message 3 times on both left and right sides
+        displayMessageMultipleTimes(3);
+    </script>
+
+</body>
+</html>
