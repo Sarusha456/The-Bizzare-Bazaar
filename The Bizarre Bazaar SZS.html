@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website of Random Colors</title>
+    <style>
+	
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+            padding: 50px;
+        }
+        h1 {
+            color: black;
+            text-shadow: 2px 2px 5px black;
+        }
+        p {
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        h2 {
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+        
+        
+
+
+    </style>
+
+<script>
+function welcomeMessage(){
+alert("#@492*9(}{#@1!+>X<A@2");}
+
+function changeText(element){
+element.innerHTML ="You clicked this button!"; }
+</script>
+
+</head>
+<body onload= "welcomeMessage()">
+
+   <h1>Welcome to the Bizarre Bazaar!!!</h1>
+<marquee style="color: red; font-size: 18px; font-weight: bold; margin-top: 20px;">WELCOME TO THE BIZARRE BAZAAR!!!</marquee>
+    <p>Where you get literrrally everything from Z to A!</p>
+    <h2> <p align="left">  Categories </p> </h2> 
+
+    <script>
+        function getRandomColor() {
+            let letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        setInterval(changeBackgroundColor, 1000);
+    </script>
+    
+    <button onclick="window.location.href='C:/Users/munu1/OneDrive/Desktop/Computer%20Vision/FOOD.html'" style="float: left; font-size: 20px; padding: 150px 150px; border-radius: 10px; background-color: #40E0D0; color: white;">FOOD</button>
+    <button onclick="window.location.href='C:/Users/munu1/OneDrive/Desktop/Computer%20Vision/clothing.html'" style="float: center; font-size: 20px; padding: 150px 150px; border-radius: 10px; background-color: #40E0D0; color: white;">CLOTHING</button>
+    <button onclick="window.location.href='C:/Users/munu1/OneDrive/Desktop/Computer%20Vision/just%20stuff.html'" style="float: right; font-size: 20px; padding: 150px 150px; border-radius: 10px; background-color: #40E0D0; color: white;">JUST STUFF:)</button>
+
+       </body>
+</html>
